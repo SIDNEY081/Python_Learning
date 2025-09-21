@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Python Basics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+     
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+   
+  </style>
+</head>
+<body>
+    <nav>
+    <div class="logo">Learn Python</div>
+    <ul>
+      <li><a href="index.html#hero">Home</a></li>
+      <li><a href="index.html#categories">Topics</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+    </ul>
+  </nav>  
+  <div class="contact-container">
+    <h1 class="contact-title">Contact Us</h1>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <a href="index.html" class="contact-back-link">&larr; Back to Home</a>
+  </div>
+</body>
+</html>

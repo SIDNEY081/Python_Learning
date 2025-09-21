@@ -1,0 +1,475 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn Python Basics</title>
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+
+<body>
+
+
+  <nav>
+    <div class="logo">Learn Python</div>
+    <ul>
+      <li><a href="index.html#hero">Home</a></li>
+      <li><a href="index.html#categories">Topics</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+    </ul>
+  </nav>  
+
+  <div class="scroll-nav" id="scrollNav"> </div>  
+
+  <section id="hero" class="section hero">
+    <h1>Welcome to Python Basics</h1>
+    <p>Start your Python journey here with simple, well-explained topics and code previews.</p>
+  </section>  
+
+  <section id="categories" class="section">
+    <div class="categories">
+     <h2 class="section-title">Explore the Basics</h2>
+      <div class="card-container">
+          <div class="card " style="background: linear-gradient(135deg, #fec872, #9ecc5f);">
+              <a href="#topic-variables"> <img src="images/variables.jpg" alt="Variables and Data Types"></a>
+
+              <h3  >Variables & Data Types</h3>
+          </div>
+          <div class="card"  style="background: linear-gradient(135deg, #6e8efb, #a777e3);">
+                <a href="#topic-control-flow"><img src="images/control-flow.jpg" alt="Control Flow"></a>
+              <h3 >Control Flow</h3>
+          </div>
+          <div class="card" style="background: linear-gradient(135deg, #7ab459, #25437a);">
+               <a href="#topic-functions"> <img src="images/functions.jpg" alt="Functions" ></a>
+              <h3 >Functions</h3>
+          </div>
+          <div class="card" style="background: linear-gradient(135deg, #747474, #747474);">
+            
+            
+              <a href="#topic-classes">
+                  <img src="images/objects-classes.jpg" alt="Classes and Objects">
+              </a>
+            <h3>Classes and Objects</h3>
+          </div>
+      </div>
+      <div class="card-container">
+         
+          <div class="card" style="background: linear-gradient(135deg, #1a40c4, #020e39);">
+            <a href="#topic-classes"><img src="images/data-structures.png" alt="Data Structures"></a>
+            <h3 >Data Structures</h3>
+           
+          </div>
+          <div class="card" style="background: linear-gradient(135deg, #100f17, #151515);">
+            <a href="#topic-classes"><img src="images/exceptions.jpg" alt="Exceptions and Errors"></a>
+            <h3>Exceptions and Errors</h3>
+          </div>
+      </div>
+    </div>
+  </section> 
+
+
+
+  <section class="section topic-section" id="topic-variables" style="background-image: url('https://source.unsplash.com/featured/?code,terminal')">
+    <h2>Variables & Data Types</h2>
+      <!-- Enhanced Article Section -->
+    <div class="card-container-code">
+       
+      <article class="topics">
+        <div class="code-explanation">
+            <p>
+              In <strong>Python</strong>, <strong>variables</strong> are used to store information that can be reused and manipulated throughout a program. Python is a <em>dynamically typed</em> language, which means you do not need to declare the data type of a variable explicitly — Python figures it out at runtime.
+            </p>
+
+            <p>Below are some of the most commonly used data types in Python:</p>
+
+            <ul>
+              <li>
+                <strong>Integer (<code>int</code>)</strong><br>
+                Whole numbers without decimal points.<br>
+                <em>Examples:</em> <code>10</code>, <code>-5</code>
+              </li>
+
+              <li>
+                <strong>Float (<code>float</code>)</strong><br>
+                Numbers with decimal points.<br>
+                <em>Examples:</em> <code>3.14</code>, <code>-0.001</code>
+              </li>
+
+              <li>
+                <strong>String (<code>str</code>)</strong><br>
+                Sequence of characters enclosed in single or double quotes.<br>
+                <em>Examples:</em> <code>"Hello"</code>, <code>'Python'</code>
+              </li>
+
+              <li>
+                <strong>Boolean (<code>bool</code>)</strong><br>
+                Represents truth values used in logic and conditions.<br>
+                <em>Values:</em> <code>True</code>, <code>False</code>
+              </li>
+
+              <li>
+                <strong>List (<code>list</code>)</strong><br>
+                An ordered, mutable collection of items.<br>
+                <em>Example:</em> <code>[1, 2, 3]</code>
+              </li>
+
+              <li>
+                <strong>Dictionary (<code>dict</code>)</strong><br>
+                A collection of key–value pairs.<br>
+                <em>Example:</em> <code>{"name": "Alice", "age": 25}</code>
+              </li>
+
+              <li>
+                <strong>NoneType (<code>None</code>)</strong><br>
+                Represents the absence of a value or a null value.<br>
+                <em>Example:</em> <code>None</code>
+              </li>
+            </ul>
+
+            <p>
+              To check the data type of a variable, you can use the built-in <code>type()</code> function:
+            </p>
+          </div>
+
+        <div class="code-block">
+          <pre>
+            <code class="language-python">
+# Examples of variable types
+x = 10                   # Integer
+y = 3.14                 # Float
+name = "Alice"           # String
+is_active = True         # Boolean
+fruits = ["apple", "banana", "cherry"]  # List
+person = {"name": "Alice", "age": 25}   # Dictionary
+nothing = None           # NoneType
+
+# Using variables
+print(f"{name} has {x} apples.")
+print(f"The value of pi is approximately {y}")
+print(f"Active user? {is_active}")
+print(f"Fruit list: {fruits}")
+print(f"Person info: {person}")
+print(f"Nothing is assigned: {nothing}")
+
+# Checking data types
+print(type(x))      # <class 'int'>
+print(type(y))      # <class 'float'>
+print(type(name))   # <class 'str'>
+print(type(is_active))  # <class 'bool'>
+print(type(fruits))     # <class 'list'>
+print(type(person))     # <class 'dict'>
+print(type(nothing))    # <class 'NoneType'>
+              </code>
+            </pre>
+          </div>
+      </article>
+
+      
+    </div>
+  </section>  
+
+  <section class="section topic-section" id="topic-control-flow" style="background-image: url('https://source.unsplash.com/featured/?flowchart')">
+    <h2>Control Flow</h2>
+     <div class="card-container-code">
+      <article class="topics">
+  <div class="code-explanation">
+    <p>
+      In <strong>Python</strong>, <strong>control flow</strong> refers to the order in which the code is executed. It allows you to make decisions, repeat actions, and control how and when parts of your program run.
+    </p>
+
+    <p>Python provides several control flow tools:</p>
+
+    <ul>
+      <li>
+        <strong>Conditional Statements (<code>if</code>, <code>elif</code>, <code>else</code>)</strong><br>
+        Used to execute blocks of code based on certain conditions.
+      </li>
+
+      <li>
+        <strong>Loops (<code>for</code>, <code>while</code>)</strong><br>
+        Used to repeat a block of code multiple times.
+      </li>
+
+      <li>
+        <strong>Loop Control Statements (<code>break</code>, <code>continue</code>, <code>pass</code>)</strong><br>
+        Used to control the behavior of loops.
+      </li>
+    </ul>
+
+    <p><strong>Indentation</strong> is crucial in Python and defines blocks of code under each control structure.</p>
+  </div>
+
+  <div class="code-block">
+    <pre>
+<code class="language-python">
+# Conditional Statements
+x = 10
+if x > 0:
+    print("Positive number")
+elif x == 0:
+    print("Zero")
+else:
+    print("Negative number")
+
+# For loop
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(f"I like {fruit}")
+
+# While loop
+count = 0
+while count < 3:
+    print(f"Count is {count}")
+    count += 1
+
+# Break example
+for number in range(5):
+    if number == 3:
+        break
+    print(f"Number: {number}")
+
+# Continue example
+for number in range(5):
+    if number == 2:
+        continue
+    print(f"Number: {number}")
+
+# Pass example (used as a placeholder)
+for i in range(5):
+    if i == 3:
+        pass  # Placeholder for future code
+    print(f"i = {i}")
+</code>
+    </pre>
+  </div>
+</article>
+
+     </div>
+  </section> 
+
+
+
+
+   <section class="section topic-section" id="topic-functions" style="background-image: url('https://source.unsplash.com/featured/?python,functions')">
+    <h2>Functions</h2>
+    <div class="card-container-code">
+      <article class="topics">
+        <div class="code-explanation">
+          <p>
+            In <strong>Python</strong>, <strong>functions</strong> are reusable blocks of code that perform a specific task. They help organize code, avoid repetition, and improve readability. Functions are defined using the <code>def</code> keyword, followed by the function name and parentheses.
+          </p>
+
+          <p>
+            Functions may take inputs called <strong>parameters</strong> and may optionally return an output using the <code>return</code> statement.
+          </p>
+
+          <p>There are two main types of functions in Python:</p>
+          <ul>
+            <li>
+              <strong>Built-in Functions</strong><br>
+              Provided by Python itself. <br>
+              <em>Examples:</em> <code>print()</code>, <code>len()</code>, <code>type()</code>
+            </li>
+
+            <li>
+              <strong>User-defined Functions</strong><br>
+              Created by the programmer using the <code>def</code> keyword.
+            </li>
+          </ul>
+
+          <p>Basic structure of a user-defined function:</p>
+          <pre><code class="language-python">
+def function_name(parameters):
+    # block of code
+    return value
+          </code></pre>
+
+        <p>Functions can have:</p>
+        <ul>
+          <li><strong>No parameters and no return value</strong></li>
+          <li><strong>Parameters but no return value</strong></li>
+          <li><strong>No parameters but return value</strong></li>
+          <li><strong>Parameters and return value</strong></li>
+        </ul>
+
+        <p>
+          Functions improve modularity and allow code reuse. You can call (invoke) a function by using its name followed by parentheses, passing arguments if required.
+        </p>
+      </div>
+
+    <div class="code-block">
+      <pre>
+      <code class="language-python">
+# Function with no parameters and no return
+def greet():
+    print("Hello, world!")
+
+# Function with a parameter
+def greet_user(name):
+    print(f"Hello, {name}!")
+
+# Function with return value
+def square(number):
+    return number * number
+
+# Function with multiple parameters and return
+def add(a, b):
+    return a + b
+
+# Calling the functions
+greet()                            # Output: Hello, world!
+greet_user("Alice")                # Output: Hello, Alice!
+print(square(5))                   # Output: 25
+result = add(10, 20)
+print(f"Sum is: {result}")         # Output: Sum is: 30
+
+# Checking function type
+print(type(greet))                 # <class 'function'>
+            </code>
+          </pre>
+        </div>
+      </article>
+
+     </div>
+
+  </section>  
+
+
+  <section class="section topic-section" id="topic-classes"style="background-image: url('https://source.unsplash.com/featured/?python,data')">
+    <h2>Classes and Objects</h2>
+     <div class="card-container-code">
+      <article class="topics">
+        <div class="code-explanation">
+          <p>
+            In <strong>Python</strong>, <strong>classes</strong> and <strong>objects</strong> are part of <em>Object-Oriented Programming (OOP)</em>, a paradigm that models real-world entities using code. A <strong>class</strong> is a blueprint for creating <strong>objects</strong>, which are instances of the class.
+          </p>
+
+          <p>
+            Classes define the <em>attributes</em> (variables) and <em>methods</em> (functions) that describe the behavior and properties of the object. Objects hold actual data and can use the methods defined in the class.
+          </p>
+
+          <p>Key terms:</p>
+          <ul>
+            <li><strong>Class</strong> – A template for creating objects</li>
+            <li><strong>Object</strong> – An instance of a class</li>
+            <li><strong>Constructor</strong> – The <code>__init__</code> method used to initialize object properties</li>
+            <li><strong>Method</strong> – A function defined inside a class</li>
+            <li><strong>Self</strong> – A reference to the current instance of the class</li>
+          </ul>
+
+          <p>Benefits of using classes:</p>
+          <ul>
+            <li>Encapsulation – Keeping data and functions bundled</li>
+            <li>Reusability – Code can be reused through instances</li>
+            <li>Scalability – Easy to expand functionality with more objects</li>
+          </ul>
+
+          <p>Basic syntax for defining and using a class:</p>
+          <pre><code class="language-python">
+class ClassName:
+    def __init__(self, parameter1, parameter2):
+        self.attribute1 = parameter1
+        self.attribute2 = parameter2
+
+    def method_name(self):
+        # perform action
+        pass
+
+# Creating an object
+obj = ClassName(value1, value2)
+obj.method_name()
+            </code></pre>
+          </div>
+
+          <div class="code-block">
+            <pre>
+          <code class="language-python">
+# Defining a class
+class Car:
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+
+    def honk(self):
+        print(f"{self.brand} {self.model} says 'Beep beep!'")
+
+    def display_info(self):
+        print(f"Car Info: {self.year} {self.brand} {self.model}")
+
+# Creating objects (instances)
+car1 = Car("Toyota", "Corolla", 2020)
+car2 = Car("Ford", "Mustang", 2023)
+
+# Using object methods
+car1.display_info()       # Car Info: 2020 Toyota Corolla
+car1.honk()               # Toyota Corolla says 'Beep beep!'
+
+car2.display_info()       # Car Info: 2023 Ford Mustang
+car2.honk()               # Ford Mustang says 'Beep beep!'
+
+# Accessing attributes directly
+print(car1.brand)         # Toyota
+print(car2.year)          # 2023
+            </code>
+                </pre>
+              </div>
+            </article>  
+
+     </div>
+  </section> 
+
+
+<section id="categories" class="section">
+  <div class="categories">
+    <h2 class="section-title">About This Site</h2>
+    <p style="color: white; margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;">
+      This website was created as part of an educational initiative to help learners understand the fundamentals of Python programming. It is structured to provide clear, hands-on guidance on core programming concepts through categorized tutorials and examples.
+    </p>
+
+    <div class="card-container">
+      <div class="card" style="background-color: #161b22;">
+        <img src="images/milestone.jpeg" alt="Project Milestones" />
+        <h3>Project Milestones</h3>
+        <p>Key stages included initial planning, content design, prototype testing, and final deployment.</p>
+      </div>
+      <div class="card" style="background-color: #161b22;">
+        <img src="images/planing.jpg" alt="Planning" />
+        <h3>Planning & Structure</h3>
+        <p>The site follows a logical structure—from beginner to advanced topics—for easy learning flow.</p>
+      </div>
+      <div class="card" style="background-color: #161b22;">
+        <img src="images/audience.jpg" alt="Purpose and Audience" />
+        <h3>Purpose & Audience</h3>
+        <p>Designed for students and beginners seeking to grasp Python through visual and practical examples.</p>
+      </div>
+      <div class="card" style="background-color: #161b22;">
+        <img src="images/source.png" alt="Sources" />
+        <h3>Sources</h3>
+        <p>Content is curated from official Python documentation and community-driven tutorials.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="section">
+    &copy; 2025 Learn Python Basics. All rights reserved.
+</footer> 
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+<script src="script.js"></script>
+
+
+
+</body>
+
+</html>

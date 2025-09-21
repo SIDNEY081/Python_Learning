@@ -1,0 +1,364 @@
+/* INDEX PAGE STYLING STARTS HERE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+body {
+  background-color: #0d1117;
+  color: #ffffff;
+}
+
+nav {
+  background-color: #161b22;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #58a6ff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero {
+  background: url('images/hero-bg.gif') no-repeat center center/cover;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+/* Cards Section */
+  .section-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 2em;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 0 20px 40px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card h3 {
+    padding: 15px 10px;
+  }
+  .card p{
+    padding: 6px;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+
+
+  .card-container-code {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 20px ;
+    margin: 10px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: scroll;
+    background: inherit;
+}
+
+
+.topic-section h2 {
+  font-size: 2rem;
+
+  margin-bottom: 1rem;
+  color: #58a6ff;
+}
+
+.code-preview {
+  background-color: #161b22;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 700px;
+
+}
+.topics {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: center;
+}
+
+.code-block, .code-explanation {
+      width: 45%;
+}
+
+pre {
+      background-color: #2d2d2d;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+}
+.code-explanation ul {
+      list-style-type: disc;
+      padding-left: 20px;
+}
+
+.code-explanation li {
+      margin-bottom: 8px;
+}
+
+.code-explanation strong {
+      color: #005792;
+}
+
+pre code {
+  font-size: 1rem;
+}
+
+.scroll-nav {
+  position: fixed;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 1001;
+}
+
+.scroll-nav button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: #58a6ff;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.scroll-nav button.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+footer {
+  background-color: #161b22;
+  text-align: center;
+  padding: 2rem;
+  color: #8b949e;
+}
+
+/* INDEX PAGE STYLING ENDS HERE */
+
+/*===============================================================================================================*/
+
+/* CONTACT US STYLING  START HERE */
+
+
+.contact-container {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 600px;
+}
+
+.contact-title {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #58a6ff;
+}
+
+.contact-form input,
+.contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+}
+
+.contact-form button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #58a6ff;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+}
+
+.contact-form button:hover {
+      background-color: #00cccc;
+}
+
+.contact-back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #58a6ff;
+      text-decoration: none;
+}
+
+.contact-back-link:hover {
+      text-decoration: underline;
+}
+
+/* CONTACT US STYLING ENDS HERE */
+
+/*================================================================================*/
+
+/*ABOUT US STYLING STARTS HERE*/
+
+
+    .about-us-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      text-align: center;
+    }
+
+    .about-us-title {
+      font-size: 36px;
+      color: #58a6ff;
+      margin-bottom: 40px;
+    }
+
+    .about-us-contributors {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 30px;
+      justify-items: center;
+      margin-bottom: 60px;
+    }
+
+    .about-us-contributor-card {
+      text-align: center;
+    }
+
+    .about-us-contributor-card img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #58a6ff;
+      margin-bottom: 15px;
+    }
+
+    .about-us-contributor-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .about-us-contributor-role {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .about-us-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 40px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .about-us-table th,
+    .about-us-table td {
+      padding: 15px;
+      border-bottom: 1px solid #444;
+      text-align: left;
+    }
+
+    .about-us-table th {
+      background-color: #58a6ff;
+      color: black;
+    }
+
+    .about-us-table tr:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .about-us-table a{
+      text-decoration: none;
+      color: #58a6ff;
+    }
+/*ABOUT US STYLING ENDS HERE*/
